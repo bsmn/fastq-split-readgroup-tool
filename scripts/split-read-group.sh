@@ -7,6 +7,10 @@
 # Outputs as a gzipped fastq file. Output prefix will be used for the output files 
 # created which will be of the form <prefix><flowcell>_<lane>_R<1/2>.fastq.gz
 
+set -o errexit
+set -o nounset
+set -o pipefail
+
 if [[ $# -lt 2 ]]; then
     echo "Usage: $(basename $0) fastq prefix"
     false
