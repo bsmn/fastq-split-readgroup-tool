@@ -19,10 +19,6 @@ fi
 FASTQ=$1
 OUTPREFIX=$2
 
-set -o errexit
-set -o nounset
-set -o pipefail
-
 if [[ "${FASTQ}" = *.gz ]]; then
     CAT=zcat
 elif [[ "${FASTQ}" = *.fastq ]]; then
